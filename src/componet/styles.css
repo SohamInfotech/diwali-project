@@ -1,0 +1,72 @@
+#app {
+    height: 100%;
+  }
+  html,
+  body {
+    position: relative;
+    height: 100%;
+  }
+  
+  body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .swiper {
+    width: 100%;
+    height: 600px;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  /* Change color of Swiper navigation arrows */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #13c5c5 !important; /* Apply the desired color */
+}
+
+/* Optional: Change the color on hover (if needed) */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color: #13c5c5 !important;
+}
+
+
+
+
+/* Add this CSS in your styles.css file */
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+li{
+  list-style:none;
+}
