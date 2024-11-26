@@ -11,12 +11,14 @@ import './styles.css';
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import { Box } from '@mui/material';
+import { Box, Container } from '@mui/material';
 
 function Page4() {
     return (
+    
         <div style={{ paddingTop: "50px", backgroundColor: "#162A2A" }}>
-            <Swiper
+            {/* <Container sx={{}}> */}
+                            <Swiper
                 spaceBetween={30}
                 centeredSlides={true}
                 autoplay={{
@@ -129,6 +131,8 @@ function Page4() {
                     </Box>
                 </SwiperSlide>
             </Swiper>
+            {/* </Container> */}
+
         </div>
     );
 }

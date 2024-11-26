@@ -14,12 +14,13 @@ import { Container } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { Visibility } from '@mui/icons-material';
 import img from "../img/logo.png"
+import Footer from './Footer';
 const pages = [
     { name: 'HOME', path: '/' },
     { name: 'games', path: '/games' },
-    { name: 'Videos', path: '/Videos' },
-    { name: 'Forums', path: '/Forums' },
-    { name: 'Pages', path: '/Pages' }
+    { name: 'Formus', path: '/Formus' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'Contect', path: '/Contect' },
 ];
 
 function Navbar() {
@@ -41,107 +42,119 @@ function Navbar() {
             backgroundColor: "#162A2A",
             padding: "0px"
         }}>
-           
-                <Toolbar disableGutters>
-                    <Box sx={{ display: { xs: 'none', md: 'flex' }, flexGrow: 1 }}>
-                        <img src={img} alt="Logo" width="150px" />
-                    </Box>
-                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-                        <IconButton
-                            size="large"
-                            aria-label="menu"
-                            aria-controls="menu-appbar"
-                            aria-haspopup="true"
-                            onClick={handleOpenNavMenu}
-                            color="inherit"
-                        >
-                            <MenuIcon sx={{ color: "#D4B26A" }} />
-                        </IconButton>
-                        <Box sx={{ display: 'flex', flexGrow: 1, justifyContent: "center", width: "100px" }}>
-                            <img src={img} alt="Logo" style={{ margin: "auto", width: "120px" }} />
-                        </Box>
-                        <Menu
-                            id="menu-appbar"
-                            anchorEl={anchorElNav}
-                            anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
-                            keepMounted
-                            transformOrigin={{ vertical: 'top', horizontal: 'left' }}
-                            open={Boolean(anchorElNav)}
-                            onClose={handleCloseNavMenu}
-                            sx={{ display: { xs: 'block', md: 'none' } }}
-                        >
-                            {pages.map((page) => (
-                                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                                  
-                                        <Typography sx={{
-                                            textAlign: 'center', color: "#F67A45", '&:hover': {
-                                                color: 'orange',
-                                            },
-                                            height: "100%"
-                                        }}>{page.name}</Typography>
-                                    
-                                </MenuItem>
-                            ))}
-                        </Menu>
-                    </Box>
 
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: "space-evenly" }}>
+            <Toolbar disableGutters>
+                <Link to={'/'}>
+               
+                <Box sx={{ display: { xs: 'none', md: 'flex' }, flexGrow: 1 }}>
+                    <img src={img} alt="Logo" width="150px"  />
+                </Box>
+                </Link>
+                <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+                    <IconButton
+                        size="large"
+                        aria-label="menu"
+                        aria-controls="menu-appbar"
+                        aria-haspopup="true"
+                        onClick={handleOpenNavMenu}
+                        color="inherit"
+                    >
+                        <MenuIcon sx={{ color: "#D4B26A" }} />
+                    </IconButton>
+                    <Box sx={{ display: 'flex', flexGrow: 1, justifyContent: "center", width: "100px" }}>
+                        <img src={img} alt="Logo" style={{ margin: "auto", width: "120px" }} />
+                    </Box>
+                    <Menu
+                        id="menu-appbar"
+                        anchorEl={anchorElNav}
+                        anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+                        keepMounted
+                        transformOrigin={{ vertical: 'top', horizontal: 'left' }}
+                        open={Boolean(anchorElNav)}
+                        onClose={handleCloseNavMenu}
+                        sx={{ display: { xs: 'block', md: 'none' } }}
+                    >
                         {pages.map((page) => (
-                            
-                                <Button
-                                    onClick={handleCloseNavMenu}
-                                    sx={{
-                                        color: 'white',
-                                        display: 'block',
-                                         fontFamily: "Nova Round",
-                                        fontSize:'18px',
-                                        lineHeight: "28px",
-                                      
-                                        fontWeight: 'normal',
-                                        Visibility: 'visible',
-                                        '&:hover': {
-                                            color: '#ff0000',
-                                        },
-                                        height: "100%",
-                                        // fontFamily:"Ubuntu",
-                                        // fontSize:'25px',
-                                        // lineHeight: "28px",
-                                        // fontSize: "normal",
-                                        // fontWeight: 'normal',
-                                        // Visibility: 'visible',
-                                    }}
-                                >
-                                    {page.name}
-                                </Button>
-                          
-                        ))}
-                    </Box>
+                            <Link to={page.path}>
+                                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
 
-                    <Box sx={{ flexGrow: 0 }}>
-                        {/* <Tooltip title="Join Now"> */}
-                       
-                            <Button className='button'
+                                    <Typography sx={{
+                                        textAlign: 'center', color: "#F67A45", '&:hover': {
+                                            color: 'orange',
+                                        },
+                                        height: "100%"
+                                    }}>{page.name}</Typography>
+
+                                </MenuItem>
+                            </Link>
+                        ))}
+                    </Menu>
+                </Box>
+
+                <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: "space-evenly" }}>
+                    {pages.map((page) => (
+                        <Link to={page.path}>
+                            <Button
+                                onClick={handleCloseNavMenu}
                                 sx={{
-                                    fontWeight: "bold",
-                                    height: { lg: "40px", md: "35px", sm: "30px", xs: "25px" },
-                                    width: { lg: "140px", md: "120px", sm: "100px", xs: "90px" },
-                                    fontSize: { lg: "16px", md: "15px", sm: "14px", xs: "12px" },
-                                    backgroundColor: "black",
-                                    color: "white",
-                                    border: "1px solid #F67A45",
+                                    color: 'white',
+                                    display: 'block',
+                                    fontFamily: "Nova Round",
+                                    fontSize: '18px',
+                                    lineHeight: "28px",
+
+                                    fontWeight: 'normal',
+                                    Visibility: 'visible',
                                     '&:hover': {
-                                        backgroundColor: "#ff0000"
-                                    }
+                                        color: '#fd3030',
+                                    },
+                                    height: "100%",
+                                    
+                                    // fontFamily:"Ubuntu",
+                                    // fontSize:'25px',
+                                    // lineHeight: "28px",
+                                    // fontSize: "normal",
+                                    // fontWeight: 'normal',
+                                    // Visibility: 'visible',
                                 }}
                             >
-                                Join Now
+                                {page.name}
                             </Button>
-                        
-                        {/* </Tooltip> */}
-                    </Box>
-                </Toolbar>
-          
+
+                        </Link>
+                    ))}
+                </Box>
+
+                <Box sx={{ flexGrow: 0 }}>
+                    {/* <Tooltip title="Join Now"> */}
+
+                    <Button
+    className='button'
+    onClick={() => window.open("https://store.steampowered.com/", "_blank")}
+    sx={{
+        fontWeight: "bold",
+        height: { lg: "40px", md: "35px", sm: "30px", xs: "25px" },
+        width: { lg: "140px", md: "120px", sm: "100px", xs: "90px" },
+        fontSize: { lg: "16px", md: "15px", sm: "14px", xs: "12px" },
+        backgroundColor: "black",
+        color: "white",
+        border: "1px solid white",
+        fontFamily: "Nova Round",
+        '&:hover': {
+            boxShadow: 2
+        },
+        marginRight: "10px",
+    }}
+>
+    Join Now
+</Button>
+
+                    {/* </Tooltip> */}
+                </Box>
+            </Toolbar>
+
         </AppBar>
+
     );
 }
 

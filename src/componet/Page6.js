@@ -5,7 +5,7 @@ function Page6() {
     return (
         <div>
             <Container>
-                <Grid container sx={{backgroundColor:"#162A2A",display:"flex",justifyContent:"space-around"}} > {/* Use Grid with container and spacing */}
+                <Grid container sx={{backgroundColor:"##446050",display:"flex",justifyContent:"space-around"}} > {/* Use Grid with container and spacing */}
                     <Grid item xs={6}>  {/* Use Grid item with xs=12 for full-width */}
                         <Typography variant="h6" sx={{ fontSize: "25px" }}>
                             SUBSCRIBE TO OUR NEWSLETTER, GET ALL <br />
@@ -19,10 +19,13 @@ function Page6() {
                             style={{ width: '100%', height: '90%' }}
                         />
                     </Grid>
+
+
+                    
                 </Grid>
             </Container>
         </div>
-    );
+    )
 }
 
 export default Page6;
