@@ -5,6 +5,7 @@ import { FaArrowRight } from "react-icons/fa";
 import { Box, Button, Container, Grid, Typography } from '@mui/material'
 import { EffectFade, Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Link } from 'react-router-dom';
 
 
 function Game() {
@@ -138,7 +139,7 @@ function Game() {
                         display: 'flex',
                         justifyContent: 'center',
                     }}>
-                        <button className="btn-12"><span>Button</span></button>
+                 <Link to={"/Contect"}><button className="btn-12"><span>Buy Now</span></button></Link> 
                     </Box>
                 </Box>
             </div>

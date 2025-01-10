@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { Box, Button, Container, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 function Blog() {
 
@@ -65,9 +66,7 @@ function Blog() {
                         WARRIORS
                     </Box>
                     <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-                        <button className="btn-12">
-                            <span>Button</span>
-                        </button>
+                         <Link to={"/Contect"}><button className="btn-12"><span>Buy Now</span></button></Link> 
                     </Box>
                 </Box>
             </div>

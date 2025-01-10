@@ -46,7 +46,7 @@ function Navbar() {
             <Toolbar disableGutters>
                 <Link to={'/'}>
                
-                <Box sx={{ display: { xs: 'none', md: 'flex' }, flexGrow: 1 }}>
+                <Box sx={{ display: { xs: 'none', md: 'flex',color:"white" }, flexGrow: 1 }}>
                     <img src={img} alt="Logo" width="150px"  />
                 </Box>
                 </Link>
@@ -59,7 +59,7 @@ function Navbar() {
                         onClick={handleOpenNavMenu}
                         color="inherit"
                     >
-                        <MenuIcon sx={{ color: "#D4B26A" }} />
+                        <MenuIcon sx={{ color: "#f2f0eb" }} />
                     </IconButton>
                     <Box sx={{ display: 'flex', flexGrow: 1, justifyContent: "center", width: "100px" }}>
                         <img src={img} alt="Logo" style={{ margin: "auto", width: "120px" }} />
@@ -79,7 +79,7 @@ function Navbar() {
                                 <MenuItem key={page.name} onClick={handleCloseNavMenu}>
 
                                     <Typography sx={{
-                                        textAlign: 'center', color: "#F67A45", '&:hover': {
+                                        textAlign: 'center', color: "#162a2a", '&:hover': {
                                             color: 'orange',
                                         },
                                         height: "100%"

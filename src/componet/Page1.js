@@ -77,7 +77,7 @@ function Page1() {
                             color: 'white',
                             fontWeight: 400,
                             fontFamily: 'Saira Stencil One',
-                            fontSize: { xs: '80px' },
+                            fontSize: { xs: '40px', sm: '50px', md: '70px', lg: '80px' }, // Responsive font size
                             textAlign: 'center',
                             textShadow: '-6px 4px 1px #252525',
                             width: '100%',
@@ -86,24 +86,42 @@ function Page1() {
                         THE WITCHER 3
                     </Box>
 
-                    <Box sx={{
-                        color: 'white',
-                        fontWeight: 400,
-                        fontFamily: 'Saira Stencil One',
-                        fontSize: '90px',
-                        textAlign: 'center',
-                        textShadow: '-6px 4px 1px #252525',
-                        width: '100%',
-                    }}>
+                    <Box
+                        sx={{
+                            color: 'white',
+                            fontWeight: 400,
+                            fontFamily: 'Saira Stencil One',
+                            fontSize: { xs: '50px', sm: '60px', md: '80px', lg: '100px' }, // Responsive font size
+                            textAlign: 'center',
+                            textShadow: '-6px 4px 1px #252525',
+                            width: '100%',
+                        }}
+                    >
                         BATTLE BEGINS HERE
                     </Box>
-                    <Box sx={{
-                        width: '100%',
-                        display: 'flex',
-                        justifyContent: 'center',
-                    }}>
-                        <button className="btn-12" data-aos="fade-up" data-aos-duration="1200" // 1.2 seconds duration
-                            data-aos-delay="300"   ><span>Buy Now</span></button>
+
+                    {/* Button */}
+                    <Box
+                        sx={{
+                            width: '100%',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            marginTop: '20px', // Add margin for spacing
+                        }}
+                    >
+                        <button
+                            className="btn-12"
+                            data-aos="fade-up"
+                            data-aos-duration="1200" // 1.2 seconds duration
+                            data-aos-delay="300"   // 0.3 seconds delay
+                            style={{
+                                fontSize: '16px', // Base font size
+                                padding: '15px 30px', // Button padding
+                                borderRadius: '8px',
+                            }}
+                        >
+                            <span>Buy Now</span>
+                        </button>
                     </Box>
                 </Box>
             </Swiper>

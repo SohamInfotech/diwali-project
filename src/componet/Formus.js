@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Box, Container, Grid, Typography, Button } from '@mui/material';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import { Link } from 'react-router-dom';
 
 
 const blogPosts = [
@@ -117,7 +118,7 @@ function Formus() {
         display: 'flex',
         justifyContent: 'center',
     }}>
-        <button className="btn-12"><span>Buy Now</span></button>
+         <Link to={"/Contect"}><button className="btn-12"><span>Buy Now</span></button></Link> 
     </Box>
 </Box>
 </div>

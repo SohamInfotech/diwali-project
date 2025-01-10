@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Box, Button, Checkbox, Container, FormControlLabel, Grid, MenuItem, Select, TextField } from "@mui/material";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
 // import Nav from "../Nav";
 // import Footer from "../Footer";
 // import Gotop from "../Gotop/Gotop";
@@ -80,7 +81,7 @@ function Contect() {
                         display: 'flex',
                         justifyContent: 'center',
                     }}>
-                        <button className="btn-12"><span>Button</span></button>
+                          <Link to={"/Contect"}><button className="btn-12"><span>Buy Now</span></button></Link> 
                     </Box>
                 </Box>
             </div>
